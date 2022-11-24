@@ -3,6 +3,7 @@ package algorithms;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -32,7 +33,11 @@ public class ArraySmallestLargest {
 		System.out.println(arr[smallest]);
 		System.out.println(arr[largest]);
 		
-		
+		//find 2nd largest in the
+		Optional<Integer> secondlargest = Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+
+		System.out.println("2nd Largest: "+secondlargest.get());
+
 		//method that sorts the array
 		Arrays.sort(arr);
 		for(int a : arr) {

@@ -12,7 +12,7 @@ public class BubbleSortString {
 		
 		for(int i=0; i< str.length ; i++) 
 			for (int j = 0; j < i; j++) {
-				if(str[i].compareToIgnoreCase(str[j]) < 0) {
+				if(str[i].compareTo(str[j]) < 0) {
 					String t = str[i];
 					str[i] = str[j];
 					str[j] = t; 

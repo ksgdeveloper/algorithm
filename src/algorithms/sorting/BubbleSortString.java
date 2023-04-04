@@ -3,8 +3,7 @@ package algorithms.sorting;
 import java.util.Arrays;
 
 public class BubbleSortString {
-	
-	
+
 	public static void main(String[] args) {
 		String[] str = {
 				"Now", "is", "the", "time", "for", "all", "good", "men", 

@@ -34,9 +34,16 @@ public class ArraySmallestLargest {
 		System.out.println(arr[largest]);
 		
 		//find 2nd largest in the
-		Optional<Integer> secondlargest = Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+		Optional<Integer> secondlargest = Arrays.stream(arr)
+				.boxed()
+				.sorted(Comparator.reverseOrder())
+				.skip(1).findFirst();
 
-		System.out.println("2nd Largest: "+secondlargest.get());
+		if(secondlargest.isPresent()){
+			secondlargest.ifPresent(a -> System.out.println(a));
+		}else{
+			System.out.println("no record present");
+		}
 
 		//method that sorts the array
 		Arrays.sort(arr);
